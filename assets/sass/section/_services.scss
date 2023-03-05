@@ -1,0 +1,62 @@
+.service {
+  .serviceItem {
+    margin-bottom: 30px;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+	@media(max-width: 991px){
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	@media(max-width: 767px){
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	
+    .serviceItemInner {
+      background-color: $bgBlack100;
+      border: 1px solid $bgBlack50;
+      border-radius: 10px;
+      padding: 30px 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      &:hover {
+        box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+      }
+      .icon {
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto 30px;
+		text-align: center;
+		transition: all 0.3s ease;
+		&:hover {
+			background-color: $skinColor;
+		  }
+		.fa{
+			font-size: 40px;
+			line-height: 60px;
+			color: $skinColor;
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: $bgBlack100;
+			  }
+		}
+      }
+	  h4{
+		font-size: 18px;
+		margin-bottom: 15px;
+		color: $txtBlack900;
+		font-weight: 700;
+		text-transform: capitalize;
+	  }
+	  p{
+		font-size: 1rem;
+		color: $txtBlack700;
+		line-height: 25px;
+	  }
+    }
+  }
+}

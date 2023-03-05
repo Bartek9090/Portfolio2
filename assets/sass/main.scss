@@ -1,0 +1,19 @@
+// @ oznacza importowanie Nie wstawiamy podkreślnika. Nie jest on potrzebny.
+@import "variables";
+@import "mixins";
+@import "base";
+
+// plugins
+@import "plugins/normalize";
+
+// components
+
+@import "components/navigation";
+@import "components/footer";
+
+// sections
+@import "section/home";
+@import "section/about";
+@import "section/services";
+@import "section/portfolio";
+@import "section/contact";

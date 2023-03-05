@@ -1,0 +1,226 @@
+.section {
+  .container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+    .sectionTitle {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 60px;
+      h2 {
+        font-size: 3rem;
+        color: $txtBlack700;
+        font-weight: 700;
+        position: relative;
+        &:before {
+          content: "";
+          height: 4px;
+          width: 50px;
+          background-color: $skinColor;
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }
+        &:after {
+          content: "";
+          height: 4px;
+          width: 25px;
+          background-color: $skinColor;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          margin-top: 8px;
+        }
+      }
+    }
+    .aboutContent {
+      flex: 0 0 100%;
+      max-width: 100%;
+      .aboutTxt {
+        flex: 0 0 100%;
+        max-width: 100%;
+        h3 {
+          font-size: 2rem;
+          margin-bottom: 15px;
+          font-weight: 700;
+          color: $txtBlack900;
+          span {
+            color: $skinColor;
+            font-size: 2rem;
+          }
+        }
+        p {
+          font-size: 1rem;
+          line-height: 25px;
+          color: $txtBlack700;
+        }
+      }
+      .personalInfo {
+        flex: 0 0 60%;
+        max-width: 60%;
+        margin-top: 40px;
+        @media(max-width: 767px){
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .infoItem {
+          flex: 0 0 50%;
+          max-width: 50%;
+          p {
+            font-weight: 600;
+            padding: 10px 0;
+            font-size: 1rem;
+            color: $txtBlack900;
+            border-bottom: 1px solid $bgBlack50;
+            span {
+              font-weight: 400;
+              color: $txtBlack700;
+              margin-left: 4px;
+              display: inline-block;
+              @media (max-width: 1199px) {
+                display: block;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+        .buttons {
+          margin-top: 30px;
+          .btn {
+            margin-right: 15px;
+            margin-top: 10px;
+          }
+        }
+      }
+      .skills {
+        flex: 0 0 40%;
+        max-width: 40%;
+        margin-top: 40px;
+        @media(max-width: 767px){
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .skillItem {
+          flex: 0 0 100%;
+          max-width: 100%;
+          h5 {
+            line-height: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: $txtBlack900;
+            text-transform: capitalize;
+          }
+          .progress {
+            height: 7px;
+            background-color: $bgBlack50;
+            border-radius: 4px;
+            width: 100%;
+            position: relative;
+            .progress-in {
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 100%;
+              border-radius: 4px;
+              background-color: $skinColor;
+            }
+            .skill-percent {
+              position: absolute;
+              right: 0;
+              color: $txtBlack900;
+              top: -40px;
+              font-weight: 400;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+      .education {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-top: 30px;
+        @media(max-width: 900px){
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .title {
+          font-size: 1.5rem;
+          max-width: 50%;
+          margin-top: 30px;
+          color: $txtBlack700;
+        }
+        .timeline-box {
+          flex: 0 0 100%;
+          max-width: 100%;
+          .timeline {
+            background-color: $bgBlack100;
+            padding: 30px 15px;
+            border: 1px solid $bgBlack50;
+            border-radius: 10px;
+            width: 100%;
+            position: relative;
+            .timelineItem {
+              position: relative;
+              padding-left: 37px;
+              padding-bottom: 50px;
+
+              &::before {
+                content: "";
+                width: 1px;
+                position: absolute;
+                height: 100%;
+                left: 7px;
+                top: 0;
+                background-color: $skinColor;
+              }
+              &:last-child {
+                padding-bottom: 0;
+              }
+              .circleDot {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                background-color: $skinColor;
+              }
+              .timelineDate {
+                font-weight: 400;
+                font-size: 1rem;
+                margin-bottom: 12px;
+                color: $txtBlack700;
+                .fa {
+                  margin-right: 5px;
+                }
+              }
+              .timelineTitle {
+                font-weight: 700;
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+                text-transform: capitalize;
+                color: $txtBlack900;
+              }
+              .timelineText {
+                line-height: 25px;
+                font-size: 1rem;
+                text-align: justify;
+                color: $txtBlack700;
+              }
+            }
+          }
+        }
+      }
+      .experience {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-top: 30px;
+        .title {
+          font-size: 1.5rem;
+          max-width: 50%;
+          margin-top: 30px;
+          color: $txtBlack700;
+        }
+      }
+    }
+  }
+}
