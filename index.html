@@ -12,7 +12,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
-    <!-- Fontys -->
+    <link rel="stylesheet" href="assets/css/color1.css">
+    <!-- Style switcher CSS -->
+
+    <link rel="stylesheet" href="assets/css/color1.css" class="alternetStyle" title="color1" disabled>
+    <link rel="stylesheet" href="assets/css/color2.css" class="alternetStyle" title="color2" disabled>
+    <link rel="stylesheet" href="assets/sass/components/color3.css" class="alternetStyle" title="color3" >
+    <link rel="stylesheet" href="assets/css/color4.css" class="alternetStyle" title="color4" disabled>
+    <link rel="stylesheet" href="assets/css/color5.css" class="alternetStyle" title="color5" disabled>
+
+    <!-- Fonty -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -738,7 +747,33 @@
       <!-- ***** Main Content END ***** -->
     </div>
     <!-- ***** Main Cointainer END ***** -->
+    <!-- Style Switcher start -->
+
+    <div class="styleSwitcher">
+      <div class="styleSwitcherToggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="dayNight s-icon">
+        <i class="fas fa-moon"></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <ul class="color-grid">
+          <li class="color-option is-selected" data-color="#ec1839"></li>
+          <li class="color-option" data-color="#fa5b0f"></li>
+          <li class="color-option" data-color="#37b182"></li>
+          <li class="color-option" data-color="#4f8f44"></li>
+          <li class="color-option" data-color="#1854b4"></li>
+          <li class="color-option" data-color="#f021b2"></li>
+        </ul>
+      </div>
+
+      </div>
+
+
+    <!-- Style Switcher end -->
     <!-- ***** JS FILE ***** -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/styleSwitcher.js"></script>
   </body>
 </html>

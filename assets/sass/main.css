@@ -12,12 +12,9 @@ body {
   outline: none;
   font-size: 1rem;
   text-decoration: none;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-:root {
-  --main-bg-color: #ec1839;
-}
+
 ul {
   list-style: none;
 }
@@ -52,14 +49,12 @@ ul {
   border-radius: 40px;
   display: inline-block;
   white-space: nowrap;
-  background-color: var(--primary-color);
-  -webkit-transition: all 0.3s ease;
+  background-color: #ec1839;
   transition: all 0.3s ease;
   border: none;
 }
 
 .btn:hover {
-  -webkit-transform: scale(1.15);
   transform: scale(1.15);
 }
 
@@ -74,10 +69,7 @@ ul {
 }
 
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
@@ -85,7 +77,6 @@ ul {
 }
 
 .shadow-dark {
-  -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.25);
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.25);
 }
 
@@ -100,7 +91,6 @@ Use a better box model (opinionated).
 *,
 ::before,
 ::after {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -110,7 +100,7 @@ Use a more readable tab size (opinionated).
 html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
-  tab-size: 4;
+     tab-size: 4;
 }
 
 /**
@@ -137,8 +127,7 @@ body {
 Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
 */
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 /*
@@ -163,7 +152,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 */
 abbr[title] {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -182,8 +171,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
-    monospace; /* 1 */
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -250,8 +238,7 @@ Remove the inheritance of text transform in Edge and Firefox.
 1. Remove the inheritance of text transform in Firefox.
 */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -259,10 +246,10 @@ select {
 Correct the inability to style clickable types in iOS and Safari.
 */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  appearance: button;
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
 }
 
 /**
@@ -314,8 +301,8 @@ Correct the cursor style of increment and decrement buttons in Safari.
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
-[type="search"] {
-  appearance: none;
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
 
@@ -355,15 +342,9 @@ summary {
   height: 100%;
   z-index: 10;
   padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-right: 1px solid #e8dfec;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
@@ -383,11 +364,7 @@ summary {
   border-radius: 5px;
   background-color: #fdf9ff;
   display: none;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 .aside .navToggler span {
@@ -422,7 +399,7 @@ summary {
   display: block;
 }
 .aside .nav li .active {
-  color: var(--primary-color);
+  color: #ec1839;
 }
 .aside .nav li a {
   font-size: 1rem;
@@ -458,8 +435,8 @@ summary {
   position: absolute;
   width: 20px;
   height: 20px;
-  border-bottom: 5px solid var(--primary-color);
-  border-left: 5px solid var(--primary-color);
+  border-bottom: 5px solid #ec1839;
+  border-left: 5px solid #ec1839;
   bottom: 0;
   left: 0;
 }
@@ -468,8 +445,8 @@ summary {
   position: absolute;
   width: 20px;
   height: 20px;
-  border-top: 5px solid var(--primary-color);
-  border-right: 5px solid var(--primary-color);
+  border-top: 5px solid #ec1839;
+  border-right: 5px solid #ec1839;
   top: 0;
   right: 0;
 }
@@ -479,14 +456,12 @@ summary {
   right: 0;
   top: 60px;
   padding: 15px;
-  width: 325px;
+  width: 200px;
   border: 1px solid #e8dfec;
   background-color: #fdf9ff;
   z-index: 101;
   border-radius: 5px;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-transform: translateX(100%);
   transform: translateX(100%);
 }
 .styleSwitcher .styleSwitcherToggler {
@@ -504,7 +479,6 @@ summary {
   border: 1px solid #e8dfec;
   margin-right: 25px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border-radius: 50%;
 }
@@ -522,13 +496,8 @@ summary {
   text-transform: capitalize;
 }
 .styleSwitcher .colors {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .styleSwitcher .colors span {
@@ -537,16 +506,28 @@ summary {
   width: 30px;
   border-radius: 50%;
 }
+.styleSwitcher .colors .color1 {
+  background-color: #ec1839;
+}
+.styleSwitcher .colors .color2 {
+  background-color: #fa5b0f;
+}
+.styleSwitcher .colors .color3 {
+  background-color: #37b182;
+}
+.styleSwitcher .colors .color4 {
+  background-color: #1854b4;
+}
+.styleSwitcher .colors .color5 {
+  background-color: #f021b2;
+}
 
 .open {
-  -webkit-transform: translateX(-25%);
-  transform: translateX(-5%);
+  transform: translateX(-25%);
 }
 
 .homeMain {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: #4039a7;
 }
@@ -556,18 +537,13 @@ summary {
   margin: auto;
 }
 .homeMain .container .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
   position: relative;
 }
 .homeMain .container .row .homeIMG {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 40%;
   flex: 0 0 40%;
   max-width: 40%;
   position: relative;
@@ -583,9 +559,8 @@ summary {
   position: absolute;
   height: 80px;
   width: 80px;
-  border-bottom: 10px solid var(--primary-color);
-
-  border-right: 10px solid var(--primary-color);
+  border-bottom: 10px solid #ec1839;
+  border-right: 10px solid #ec1839;
   right: -80px;
   bottom: -40px;
 }
@@ -594,8 +569,8 @@ summary {
   position: absolute;
   height: 80px;
   width: 80px;
-  border-top: 10px solid var(--primary-color);
-  border-left: 10px solid var(--primary-color);
+  border-top: 10px solid #ec1839;
+  border-left: 10px solid #ec1839;
   left: -20px;
   top: -40px;
 }
@@ -606,15 +581,11 @@ summary {
   border-radius: 5px;
 }
 .homeMain .container .row .homeInfo {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 60%;
   flex: 0 0 60%;
   max-width: 60%;
 }
 @media (max-width: 991px) {
   .homeMain .container .row .homeInfo {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -627,7 +598,7 @@ summary {
   font-family: "Clicker Script", cursive;
   font-size: 3rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: #ec1839;
 }
 .homeMain .container .row .homeInfo .profession {
   font-size: 2.5rem;
@@ -637,7 +608,7 @@ summary {
   font-family: "Clicker Script", cursive;
   font-size: 3rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: #ec1839;
 }
 .homeMain .container .row .homeInfo p {
   margin-bottom: 70px;
@@ -650,8 +621,6 @@ summary {
   padding-bottom: 70px;
 }
 .section .container .sectionTitle {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 60px;
@@ -666,7 +635,7 @@ summary {
   content: "";
   height: 4px;
   width: 50px;
-  background-color: var(--primary-color);
+  background-color: #ec1839;
   position: absolute;
   top: 100%;
   left: 0;
@@ -675,21 +644,17 @@ summary {
   content: "";
   height: 4px;
   width: 25px;
-  background-color: var(--primary-color);
+  background-color: #ec1839;
   position: absolute;
   top: 100%;
   left: 0;
   margin-top: 8px;
 }
 .section .container .aboutContent {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
 }
 .section .container .aboutContent .aboutTxt {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
 }
@@ -700,7 +665,7 @@ summary {
   color: #4039a7;
 }
 .section .container .aboutContent .aboutTxt h3 span {
-  color: var(--primary-color);
+  color: #ec1839;
   font-size: 2rem;
 }
 .section .container .aboutContent .aboutTxt p {
@@ -709,23 +674,17 @@ summary {
   color: #504e70;
 }
 .section .container .aboutContent .personalInfo {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 60%;
   flex: 0 0 60%;
   max-width: 60%;
   margin-top: 40px;
 }
 @media (max-width: 767px) {
   .section .container .aboutContent .personalInfo {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
 }
 .section .container .aboutContent .personalInfo .infoItem {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
 }
@@ -756,23 +715,17 @@ summary {
   margin-top: 10px;
 }
 .section .container .aboutContent .skills {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 40%;
   flex: 0 0 40%;
   max-width: 40%;
   margin-top: 40px;
 }
 @media (max-width: 767px) {
   .section .container .aboutContent .skills {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
 }
 .section .container .aboutContent .skills .skillItem {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
 }
@@ -796,7 +749,7 @@ summary {
   top: 0;
   height: 100%;
   border-radius: 4px;
-  background-color: var(--primary-color);
+  background-color: #ec1839;
 }
 .section .container .aboutContent .skills .skillItem .progress .skill-percent {
   position: absolute;
@@ -807,16 +760,12 @@ summary {
   line-height: 40px;
 }
 .section .container .aboutContent .education {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
   margin-top: 30px;
 }
 @media (max-width: 900px) {
   .section .container .aboutContent .education {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -828,8 +777,6 @@ summary {
   color: #504e70;
 }
 .section .container .aboutContent .education .timeline-box {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
 }
@@ -841,111 +788,55 @@ summary {
   width: 100%;
   position: relative;
 }
-.section
-  .container
-  .aboutContent
-  .education
-  .timeline-box
-  .timeline
-  .timelineItem {
+.section .container .aboutContent .education .timeline-box .timeline .timelineItem {
   position: relative;
   padding-left: 37px;
   padding-bottom: 50px;
 }
-.section
-  .container
-  .aboutContent
-  .education
-  .timeline-box
-  .timeline
-  .timelineItem::before {
+.section .container .aboutContent .education .timeline-box .timeline .timelineItem::before {
   content: "";
   width: 1px;
   position: absolute;
   height: 100%;
   left: 7px;
   top: 0;
-  background-color: var(--primary-color);
+  background-color: #ec1839;
 }
-.section
-  .container
-  .aboutContent
-  .education
-  .timeline-box
-  .timeline
-  .timelineItem:last-child {
+.section .container .aboutContent .education .timeline-box .timeline .timelineItem:last-child {
   padding-bottom: 0;
 }
-.section
-  .container
-  .aboutContent
-  .education
-  .timeline-box
-  .timeline
-  .timelineItem
-  .circleDot {
+.section .container .aboutContent .education .timeline-box .timeline .timelineItem .circleDot {
   position: absolute;
   left: 0;
   top: 0;
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: var(--primary-color);
+  background-color: #ec1839;
 }
-.section
-  .container
-  .aboutContent
-  .education
-  .timeline-box
-  .timeline
-  .timelineItem
-  .timelineDate {
+.section .container .aboutContent .education .timeline-box .timeline .timelineItem .timelineDate {
   font-weight: 400;
   font-size: 1rem;
   margin-bottom: 12px;
   color: #504e70;
 }
-.section
-  .container
-  .aboutContent
-  .education
-  .timeline-box
-  .timeline
-  .timelineItem
-  .timelineDate
-  .fa {
+.section .container .aboutContent .education .timeline-box .timeline .timelineItem .timelineDate .fa {
   margin-right: 5px;
 }
-.section
-  .container
-  .aboutContent
-  .education
-  .timeline-box
-  .timeline
-  .timelineItem
-  .timelineTitle {
+.section .container .aboutContent .education .timeline-box .timeline .timelineItem .timelineTitle {
   font-weight: 700;
   font-size: 1.2rem;
   margin-bottom: 15px;
   text-transform: capitalize;
   color: #4039a7;
 }
-.section
-  .container
-  .aboutContent
-  .education
-  .timeline-box
-  .timeline
-  .timelineItem
-  .timelineText {
+.section .container .aboutContent .education .timeline-box .timeline .timelineItem .timelineText {
   line-height: 25px;
   font-size: 1rem;
   text-align: justify;
   color: #504e70;
 }
 .section .container .aboutContent .experience {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
   margin-top: 30px;
@@ -959,23 +850,17 @@ summary {
 
 .service .serviceItem {
   margin-bottom: 30px;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 33.33%;
   flex: 0 0 33.33%;
   max-width: 33.33%;
 }
 @media (max-width: 991px) {
   .service .serviceItem {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 @media (max-width: 767px) {
   .service .serviceItem {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -986,11 +871,9 @@ summary {
   border-radius: 10px;
   padding: 30px 15px;
   text-align: center;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .service .serviceItem .serviceItemInner:hover {
-  -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 .service .serviceItem .serviceItemInner .icon {
@@ -1000,24 +883,20 @@ summary {
   display: block;
   margin: 0 auto 30px;
   text-align: center;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .service .serviceItem .serviceItemInner .icon:hover {
-  background-color: var(--primary-color);
-  color: #fdf9ff;
-}
-.service .serviceItem .serviceItemInner .icon:hover .fa {
-  color: #fdf9ff;
+  background-color: #ec1839;
 }
 .service .serviceItem .serviceItemInner .icon .fa {
   font-size: 40px;
   line-height: 60px;
-  color: var(--primary-color);
-  -webkit-transition: all 0.3s ease;
+  color: #ec1839;
   transition: all 0.3s ease;
 }
-
+.service .serviceItem .serviceItemInner .icon .fa:hover {
+  color: #fdf9ff;
+}
 .service .serviceItem .serviceItemInner h4 {
   font-size: 18px;
   margin-bottom: 15px;
@@ -1035,8 +914,6 @@ summary {
   padding-bottom: 40px;
 }
 .portfolio .container .portfolioHeading {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 40px;
@@ -1046,24 +923,18 @@ summary {
   font-weight: 500;
 }
 .portfolio .container .portfolioItem {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 33.33%;
   flex: 0 0 33.33%;
   min-width: 33.33%;
   margin-bottom: 30px;
 }
 @media (max-width: 991px) {
   .portfolio .container .portfolioItem {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 @media (max-width: 767px) {
   .portfolio .container .portfolioItem {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -1080,24 +951,18 @@ summary {
 }
 
 .section .container .contactTitle {
-  color: var(--primary-color);
+  color: #ec1839;
   text-align: center;
-  -webkit-box-flex: 25px;
-  -ms-flex: 25px;
   flex: 25px;
   margin-bottom: 20px;
 }
 .section .container .contactSubTitle {
-  color: var(--primary-color);
+  color: #ec1839;
   text-align: center;
-  -webkit-box-flex: 15px;
-  -ms-flex: 15px;
   flex: 15px;
   margin-bottom: 60px;
 }
 .section .container .contacInfoItem {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
   text-align: center;
@@ -1105,16 +970,12 @@ summary {
 }
 @media (max-width: 991px) {
   .section .container .contacInfoItem {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 @media (max-width: 767px) {
   .section .container .contacInfoItem {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -1124,11 +985,11 @@ summary {
 }
 .section .container .contacInfoItem .icon .fa {
   font-size: 25px;
-  color: var(--primary-color);
+  color: #ec1839;
 }
 .section .container .contacInfoItem .icon .fas {
   font-size: 25px;
-  color: var(--primary-color);
+  color: #ec1839;
 }
 .section .container .contacInfoItem h4 {
   font-size: 1.4rem;
@@ -1144,28 +1005,20 @@ summary {
   font-weight: 400;
 }
 .section .contactForm {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
 }
 .section .contactForm .col-6 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
 }
 @media (max-width: 767px) {
   .section .contactForm .col-6 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
 }
 .section .contactForm .col-12 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
 }
@@ -1181,11 +1034,9 @@ summary {
   padding: 10px 25px;
   font-size: 16px;
   color: #504e70;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .section .contactForm .formItem .formControl:focus {
-  -webkit-box-shadow: 0 0 30px rgba(48, 46, 77, 0.45);
   box-shadow: 0 0 30px rgba(48, 46, 77, 0.45);
 }
 .section .contactForm .formItem .textarea {
@@ -1194,59 +1045,4 @@ summary {
 .section .contactForm .btn {
   height: 50px;
   padding: 0 50px;
-}
-
-/* SWITCHER ON MY OWN 2*/
-
-:root {
-  --primary-color: #ec1839;
-}
-
-.color-option {
-  height: 35px;
-  width: 35px;
-  list-style: none;
-  border-radius: 4px;
-  margin: 7px;
-  transition: 0.2s;
-  cursor: pointer;
-}
-.color-option :hover {
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
-}
-.color-option .is-selected {
-  transform: scale(1.1);
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.color-option:nth-child(1) {
-  background: #ec1839;
-}
-.color-option:nth-child(2) {
-  background: #fa5b0f;
-}
-.color-option:nth-child(3) {
-  background: #37b182;
-}
-.color-option:nth-child(4) {
-  background: #4f8f44;
-}
-.color-option:nth-child(5) {
-  background: #1854b4;
-}
-.color-option:nth-child(6) {
-  background: #f021b2;
-}
-
-.color-grid {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  font-size: 20px;
-  text-align: center;
-  margin-top: 0;
-  transition: color 0.2s;
-}
+}/*# sourceMappingURL=main.css.map */

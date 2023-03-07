@@ -26,7 +26,7 @@
           position: absolute;
           height: 80px;
           width: 80px;
-          border-bottom: 10px solid $skinColor;
+          border-bottom: 10px solid var(--primary-color);
           border-right: 10px solid $skinColor;
           right: -80px;
           bottom: -40px;
@@ -72,7 +72,7 @@
             font-family: "Clicker Script", cursive;
             font-size: 3rem;
             font-weight: 700;
-            color: $skinColor;
+            color: var(--primary-color);
           }
         }
         p {
