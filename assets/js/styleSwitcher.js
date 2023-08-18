@@ -12,7 +12,23 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Color switcher on my own 2
+// darkLight mode
+
+const dayNight = document.querySelector(".dayNight");
+dayNight.addEventListener("click", () => {
+  dayNight.querySelector("i").classList.toggle("fa-sun");
+  dayNight.querySelector("i").classList.toggle("fa-moon");
+  document.body.classList.toggle("dark");
+});
+window.addEventListener("load", () => {
+  if (document.body.classList.contains("dark")) {
+    dayNight.querySelector("i").classList.add(" fa-sun");
+  } else {
+    dayNight.querySelector("i").classList.add("fa-moon");
+  }
+});
+
+// End of dark light mode
 
 // Listen for clicks on .color-option elements, grab value from data attribute and update --primary-color
 
