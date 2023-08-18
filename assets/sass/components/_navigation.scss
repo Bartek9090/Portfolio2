@@ -1,0 +1,121 @@
+.aside {
+  width: 270px;
+  background-color: $bgBlack100;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 10;
+  padding: 30px;
+  display: flex;
+  border-right: 1px solid $bgBlack50;
+  justify-content: center;
+  align-items: center;
+  font-family: $primaryFont;
+  @media(max-width:1199px){
+    
+      left: -270px;
+    
+  }
+  .navToggler {
+    height: 40px;
+    width: 45px;
+    border: 1px solid $bgBlack50;
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background-color: $bgBlack100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    span {
+      height: 2px;
+      width: 18px;
+      background-color: $skinColor;
+      position: relative;
+      &:before {
+        content: "";
+        height: 2px;
+        width: 18px;
+        background-color: $skinColor;
+        position: absolute;
+        top: -6px;
+        left: 0;
+      }
+      &:after {
+        content: "";
+        height: 2px;
+        width: 18px;
+        background-color: $skinColor;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+      }
+    }
+  }
+  .nav {
+    margin-top: 50px;
+    li {
+      margin-bottom: 20px;
+      display: block;
+
+      // tutej bedzie problem huehuehuehhue
+      .active {
+        color: $skinColor;
+      }
+      a {
+        font-size: 1rem;
+        font-weight: 600;
+        display: block;
+        border-bottom: 1px solid $bgBlack50;
+        color: $txtBlack700;
+        padding: 5px 15px;
+
+        i {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  .logo {
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+    a {
+      color: $txtBlack700;
+      font-weight: 700;
+      padding: 15px 20px;
+      font-size: 30px;
+      letter-spacing: 5px;
+      position: relative;
+
+      span {
+        font-family: $secondaryFont;
+        font-size: 40px;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-bottom: 5px solid $skinColor;
+        border-left: 5px solid $skinColor;
+        bottom: 0;
+        left: 0;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-top: 5px solid $skinColor;
+        border-right: 5px solid $skinColor;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}

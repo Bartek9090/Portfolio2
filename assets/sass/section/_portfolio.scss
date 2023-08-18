@@ -1,0 +1,39 @@
+.portfolio {
+  .container {
+	padding-bottom: 40px;
+    .portfolioHeading {
+      flex: 0 0 100%;
+      max-width: 100%;
+	  margin-bottom: 40px;
+      h2 {
+        color: $txtBlack900;
+        font-weight: 500;
+      }
+    }
+	.portfolioItem{
+		flex: 0 0 33.33%;
+		min-width: 33.33%;
+		margin-bottom: 30px;
+
+		@media(max-width: 991px){
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		@media(max-width: 767px){
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+		.portfolioItemInner{
+			border: 6px solid $bgBlack100;
+			border-radius: 10px;
+			overflow: hidden;
+			cursor: pointer;
+			.portfolioImg img{
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+  }
+}

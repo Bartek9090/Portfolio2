@@ -1,0 +1,21 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/assets/css"
+        },
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    // generuje prefixy które sa niezbędne w starszych wersjach przeglądarek. Do dwóch wersji do tyłu.
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    // port na którym pracuje nasz kompiler
+    "liveServer.settings.port": 5501
+}
