@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -40,8 +44,34 @@ ul {
   display: block;
   opacity: 1;
   padding: 0 30px;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
 }
 
+.section.backSection {
+  z-index: 1;
+}
+.section.active {
+  z-index: 2;
+  opacity: 1;
+  animation: slideSection 1s ease;
+}
+
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 .padd-15 {
   padding-left: 15px;
   padding-right: 15px;
@@ -378,35 +408,57 @@ summary {
   -ms-flex-align: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
+  transform: all 0.3s ease;
 }
 @media (max-width: 1199px) {
   .aside {
     left: -270px;
   }
+  .section .container {
+    padding-top: 70px;
+  }
+  .aside.open {
+    left: 0;
+  }
+  .section {
+    left: 0;
+  }
+
+  .aside .navToggler.open {
+    left: 270px;
+  }
+  .section.open {
+    left: 300px;
+  }
 }
 .aside .navToggler {
+  display: flex;
   height: 40px;
   width: 45px;
   border: 1px solid #e8dfec;
   cursor: pointer;
   position: fixed;
-  left: 300px;
+  left: 40px;
   top: 20px;
   border-radius: 5px;
   background-color: #fdf9ff;
-  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  transform: all 0.3s ease;
 }
 .aside .navToggler span {
   height: 2px;
   width: 18px;
   background-color: #ec1839;
   position: relative;
+}
+
+.aside .navToggler.open span {
+  background-color: transparent;
 }
 .aside .navToggler span:before {
   content: "";
@@ -417,6 +469,11 @@ summary {
   top: -6px;
   left: 0;
 }
+
+.aside .navToggler.open span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
 .aside .navToggler span:after {
   content: "";
   height: 2px;
@@ -425,6 +482,11 @@ summary {
   position: absolute;
   bottom: -6px;
   left: 0;
+}
+
+.aside .navToggler.open span::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 .aside .nav {
   margin-top: 50px;
@@ -442,7 +504,6 @@ summary {
   display: block;
   border-bottom: 1px solid #e8dfec;
   color: var(--txtBlack700);
-
   padding: 5px 15px;
 }
 .aside .nav li a i {
@@ -796,7 +857,6 @@ summary {
   margin-top: 30px;
 }
 .section .container .aboutContent .personalInfo .buttons .btn {
-  margin-right: 15px;
   margin-top: 10px;
 }
 .section .container .aboutContent .skills {

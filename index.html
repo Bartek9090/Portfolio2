@@ -70,19 +70,19 @@
         <div class="navToggler"><span> </span></div>
         <ul class="nav">
           <li>
-            <a href="#" class="active"><i class="fa fa-home"></i>Home</a>
+            <a href="#home" class="active"><i class="fa fa-home"></i>Home</a>
           </li>
           <li>
-            <a href="section/about"><i class="fa fa-user"></i>About</a>
+            <a href="#about"><i class="fa fa-user"></i>About</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-list"></i>Services</a>
+            <a href="#services"><i class="fa fa-list"></i>Services</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-briefcase"></i>Portfolio</a>
+            <a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-comments"></i>Contact</a>
+            <a href="#contact"><i class="fa fa-comments"></i>Contact</a>
           </li>
         </ul>
       </div>
@@ -90,7 +90,7 @@
       <!-- ***** Main Content ***** -->
       <div class="mainContent">
         <!-- ***** Home Section Start ***** -->
-        <section class="homeMain section" id="home">
+        <section class="homeMain active section" id="home">
           <div class="container">
             <div class="row introRow">
               <div class="homeInfo padd-15">
@@ -109,7 +109,7 @@
                   I am a web designer with experience for 10year. My expertise
                   is to create and website design, and many more...
                 </p>
-                <a href="#contact" class="btn hire-me">Hire me</a>
+                <a href="#" class="btn">Download CV</a>
               </div>
               <div class="homeIMG padd-15">
                 <img src="assets/img/YellowWall3.jpg" alt="yellowWall" />
@@ -175,9 +175,13 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="buttons">
-                        <a href="#" class="btn">Download CV</a>
-                        <a href="#contact" class="btn hire-me">Hire me</a>
+                      <div class="buttons padd-15">
+                        <a
+                          href="#contact"
+                          data-section-index="1"
+                          class="btn hire-me"
+                          >Hire me</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -588,7 +592,7 @@
         <!-- ***** Services Section END ***** -->
         <!-- ***** PORTFOLIO Section START ***** -->
 
-        <section class="portfolio section">
+        <section class="portfolio section" id="portfolio">
           <div class="container">
             <div class="row">
               <div class="sectionTitle padd-15">

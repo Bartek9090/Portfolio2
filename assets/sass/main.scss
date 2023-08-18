@@ -1,7 +1,6 @@
 // @ oznacza importowanie Nie wstawiamy podkreślnika. Nie jest on potrzebny.
 @import "variables";
 @import "mixins";
-@import "base";
 
 // plugins
 @import "plugins/normalize";
@@ -11,7 +10,6 @@
 @import "components/navigation";
 @import "components/footer";
 @import "components/styleSwitcher";
-
 
 // sections
 @import "section/home";
